@@ -1,13 +1,15 @@
 # ShERML
-This repository contains the code of ShERML editor.
+## ShERML: Mapping Relational Data to RDF
+ShERML, a tool for facilitating the data exchange from relational data to RDF. This tool allows to design a relational-to-RDF mapping by drawing arrows between schematic representations of the relational schema on the one hand, and a SHACL or ShEx schema on the other hand.
 # Installation #
 1. Check your computer has java installed
+2. Ensure you are connected to the internet since many javascript files used in our tool are stored in the internet
 3. Ensure the port 8080 is not blocked by other program
-2. Download the jar file ```rel2shape.jar```
-3. Open a terminal  and go to the same directory of the jar file (```cd path```)
-4. Run the command 
+4. Download the jar file ```rel2shape.jar``` from the release folder 
+5. Open a terminal  and go to the same directory of the jar file (```cd path```)
+6. Run the command 
 ```java -jar rel2shape.jar```
-5. Open a browser and type
+7. Open a browser and type
 ```localhost:8080/```
 
 # Demo #
