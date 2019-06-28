@@ -1,5 +1,6 @@
 # ShERML
-This repository contains the code of ShERML editor.
+## ShERML: Mapping Relational Data to RDF
+ShERML, a tool for facilitating the data exchange from relational data to RDF. This tool allows to design a relational-to-RDF mapping by drawing arrows between schematic representations of the relational schema on the one hand, and a SHACL or ShEx schema on the other hand.
 # Installation #
 1. Check your computer has java installed
 2. Ensure you are connected to the internet since many javascript files used in our tool are stored in the internet
