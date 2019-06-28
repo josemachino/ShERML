@@ -11,8 +11,8 @@ This repository contains the code of ShERML editor.
 ```localhost:8080/```
 
 # Demo #
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=3gc2BgPu1Rs
-" target="_blank"><img src="http://img.youtube.com/vi/3gc2BgPu1Rs/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=6llcKyTgEpw
+" target="_blank"><img src="http://img.youtube.com/vi/6llcKyTgEpw/0.jpg" 
 alt="ShERML Editor" width="240" height="180" border="10" /></a>
 
 ## Built With
