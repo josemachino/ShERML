@@ -3,7 +3,7 @@ This repository contains the code of ShERML editor.
 # Installation #
 1. Check your computer has java installed
 3. Ensure the port 8080 is not blocked by other program
-2. Download the jar file ```rel2shape.jar```
+2. Download the jar file ```rel2shape.jar``` from the release folder 
 3. Open a terminal  and go to the same directory of the jar file (```cd path```)
 4. Run the command 
 ```java -jar rel2shape.jar```
