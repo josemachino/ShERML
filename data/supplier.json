@@ -1,0 +1,82 @@
+{
+  "type": "Schema",
+  "start": "https://inria.fr/TProduct",
+  "shapes": [
+    {
+      "id": "https://inria.fr/TProduct",
+      "type": "Shape",
+      "expression": {
+        "type": "EachOf",
+        "expressions": [
+          
+		  {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/origin",
+            "valueExpr": {
+              "type": "NodeConstraint"
+            },
+			"min":0,
+            "max":1
+          },
+		  {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/price",
+            "valueExpr": {
+              "type": "NodeConstraint"
+            }
+          },
+		  {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/name",
+            "valueExpr": {
+              "type": "NodeConstraint"
+            }
+          },
+		            {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/suppliedBy",
+            "valueExpr": "https://inria.fr/TSupplier",
+			"min":1,
+            "max":5
+          }
+        ]
+      }
+    },
+    {
+      "id": "https://inria.fr/TSupplier",
+      "type": "Shape",
+      "expression": {
+        "type": "EachOf",
+        "expressions": [
+{
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/phone",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          },
+		            {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/name",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          },
+		  {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/email",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+			"min":0,
+            "max":-1
+          }
+		  ]
+      }
+    }
+  ],
+  "@context": "http://www.w3.org/ns/shex.jsonld"
+}
