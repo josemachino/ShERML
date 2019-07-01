@@ -1,0 +1,68 @@
+{
+  "type": "Schema",
+  "start": "https://inria.fr/TBug",
+  "shapes": [
+    {
+      "id": "https://inria.fr/TBug",
+      "type": "Shape",
+      "expression": {
+        "type": "EachOf",
+        "expressions": [
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/descr",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          },
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/rep",
+            "valueExpr": "https://inria.fr/TUser"
+          },
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/related",
+            "valueExpr": "https://inria.fr/TBug",
+            "min":0,
+            "max":-1
+          }
+        ]
+      }
+    },
+    {
+      "id": "https://inria.fr/TUser",
+      "type": "Shape",
+      "expression": {
+        "type": "EachOf",
+        "expressions": [
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/name",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          },
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/email",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          },
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/tracks",
+            "valueExpr": "https://inria.fr/TBug",
+            "min":0,
+            "max":-1
+          }
+          ]
+      }
+    }
+  ],
+  "@context": "http://www.w3.org/ns/shex.jsonld"
+}
