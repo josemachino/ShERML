@@ -9,6 +9,7 @@
         "type": "EachOf",
         "expressions": [
           
+          
 		  {
             "type": "TripleConstraint",
             "predicate": "http://hl7.org/fhir/origin",
@@ -25,19 +26,19 @@
               "type": "NodeConstraint"
             }
           },
-		  {
+          {
             "type": "TripleConstraint",
             "predicate": "http://hl7.org/fhir/name",
             "valueExpr": {
               "type": "NodeConstraint"
             }
           },
-		            {
+          {
             "type": "TripleConstraint",
             "predicate": "http://hl7.org/fhir/suppliedBy",
             "valueExpr": "https://inria.fr/TSupplier",
 			"min":1,
-            "max":5
+			"max":1
           }
         ]
       }
@@ -48,7 +49,7 @@
       "expression": {
         "type": "EachOf",
         "expressions": [
-{
+        {
             "type": "TripleConstraint",
             "predicate": "http://hl7.org/fhir/phone",
             "valueExpr": {
@@ -56,7 +57,7 @@
               "datatype": "http://www.w3.org/2001/XMLSchema#string"
             }
           },
-		            {
+          {
             "type": "TripleConstraint",
             "predicate": "http://hl7.org/fhir/name",
             "valueExpr": {
@@ -64,6 +65,7 @@
               "datatype": "http://www.w3.org/2001/XMLSchema#string"
             }
           },
+            
 		  {
             "type": "TripleConstraint",
             "predicate": "http://hl7.org/fhir/email",

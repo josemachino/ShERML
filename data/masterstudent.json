@@ -1,9 +1,9 @@
 {
   "type": "Schema",
-  "start": "https://inria.fr/StudentShape",
+  "start": "https://inria.fr/TStudent",
   "shapes": [
     {
-      "id": "https://inria.fr/StudentShape",
+      "id": "https://inria.fr/TStudent",
       "type": "Shape",
       "expression": {
         "type": "EachOf",
@@ -15,12 +15,23 @@
               "type": "NodeConstraint"
             }
           },
-		  {
+	  {
             "type": "TripleConstraint",
-            "predicate": "http://hl7.org/fhir/subject",
+            "predicate": "http://hl7.org/fhir/course",
             "valueExpr": {
               "type": "NodeConstraint"
-            }
+            },
+            "min":1,
+	    "max":5
+          },
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/knowsProf",
+            "valueExpr": {
+              "type": "NodeConstraint"
+            },
+            "min":1,
+	    "max":5
           }
         ]
       }

@@ -13,7 +13,15 @@ CREATE TABLE IF NOT EXISTS BachStudent (
 CREATE TABLE IF NOT EXISTS Course (
     c_id VARCHAR(255) NOT NULL,
     c_subject VARCHAR(255) NOT NULL,
-    PRIMARY KEY (c_id)
+    id_teacher integer,
+    PRIMARY KEY (c_id),
+    FOREIGN KEY (id_teacher) REFERENCES Teacher(t_id),
+)  ENGINE=INNODB;
+
+CREATE TABLE IF NOT EXISTS Teacher (
+    t_id integer,
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (t_id)
 )  ENGINE=INNODB;
 
 CREATE TABLE IF NOT EXISTS MasterEnrollment (
@@ -42,8 +50,11 @@ INSERT INTO MasterStudent (ms_id, ms_name) VALUES ('101', 'Juan');
 INSERT INTO BachStudent (bs_id, bs_name) VALUES ('200', 'Rosa');
 INSERT INTO BachStudent (bs_id, bs_name) VALUES ('201', 'Pedro');
 
-INSERT INTO Course (c_id, c_subject) VALUES ('300', 'Math');
-INSERT INTO Course (c_id, c_subject) VALUES ('301', 'Logic');
+INSERT INTO Teacher (t_id, name) VALUES (1, 'Pamela');
+INSERT INTO Teacher (t_id, name) VALUES (2, 'Edith');
+
+INSERT INTO Course (c_id, c_subject,id_teacher) VALUES ('300', 'Math',1);
+INSERT INTO Course (c_id, c_subject,id_teacher) VALUES ('301', 'Logic',2);
 
 INSERT INTO MasterEnrollment (stud_id, cour_id, e_grade, e_year) VALUES ('100', '300', '15', '2016');
 INSERT INTO MasterEnrollment (stud_id, cour_id, e_grade, e_year) VALUES ('100', '300', '15', '2017');
