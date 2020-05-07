@@ -1,0 +1,30 @@
+{
+  "type": "Schema",
+  "start": "https://inria.fr/StudentShape",
+  "shapes": [
+    {
+      "id": "https://inria.fr/StudentShape",
+      "type": "Shape",
+      "expression": {
+        "type": "EachOf",
+        "expressions": [
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/name",
+            "valueExpr": {
+              "type": "NodeConstraint"
+            }
+          },
+		  {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/subject",
+            "valueExpr": {
+              "type": "NodeConstraint"
+            }
+          }
+        ]
+      }
+    }    
+  ],
+  "@context": "http://www.w3.org/ns/shex.jsonld"
+}

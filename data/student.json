@@ -1,0 +1,93 @@
+{
+  "type": "Schema",
+  "start": "https://inria.fr/StudentShape",
+  "shapes": [
+    {
+      "id": "https://inria.fr/StudentShape",
+      "type": "Shape",
+      "expression": {
+        "type": "EachOf",
+        "expressions": [
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/name",
+            "valueExpr": {
+              "type": "NodeConstraint"
+            }
+          },
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/worksWith",
+            "valueExpr": "https://inria.fr/ProfShape",
+            "min":0,
+            "max":-1
+          }
+		  ,
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/attends",
+            "valueExpr": "https://inria.fr/CourseShape"
+          },
+		  {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/helpsIn",
+            "valueExpr": "https://inria.fr/CourseShape",
+            "min":0,
+            "max":-1
+          }
+        ]
+      }
+    },
+    {
+      "id": "https://inria.fr/CourseShape",
+      "type": "Shape",
+      "expression": {
+        "type": "EachOf",
+        "expressions": [
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/name",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          },
+		  {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/prof",
+            "valueExpr": "https://inria.fr/ProfShape"
+          }
+		  ]
+      }
+    },
+	{
+      "id": "https://inria.fr/ProfShape",
+      "type": "Shape",
+      "expression": {
+        "type": "EachOf",
+        "expressions": [
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/name",
+            "valueExpr": {
+              "type": "NodeConstraint"
+            }
+          },
+		  {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/office",
+            "valueExpr": {
+              "type": "NodeConstraint"
+            }
+          },
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://hl7.org/fhir/course",
+            "valueExpr": "https://inria.fr/CourseShape"
+          }
+        ]
+      }
+    }
+  ],
+  "@context": "http://www.w3.org/ns/shex.jsonld"
+}

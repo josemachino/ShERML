@@ -6,11 +6,19 @@ ShERML, a tool for facilitating the data exchange from relational data to RDF. T
 2. Ensure you are connected to the internet since many javascript files used in our tool are stored in the internet
 3. Ensure the port 8080 is not blocked by other program
 4. Download the jar file ```rel2shape.jar``` from the release folder 
-5. Open a terminal  and go to the same directory of the jar file (```cd path```)
+5. Open a terminal  and go to the same directory of the jar file (```$cd path```)
 6. Run the command 
-```java -jar rel2shape.jar```
+```$java -jar rel2shape.jar```
 7. Open a browser and type
 ```localhost:8080/```
+
+# Instructions #
+The tool was tested with Chrome and Firefox browser.
+1. Load a relational database. For instance the supplier.sql in folder data.
+2. Load the ShEx schema. For instance the supplier.json in folder data.
+3. Define mappings by connecting circular anchors from tables to shapes and attributes to properties.
+4. Materialize the RDF
+5. Export as SQL and R2RML
 
 # Demo #
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=6llcKyTgEpw
