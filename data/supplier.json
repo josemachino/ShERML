@@ -37,8 +37,8 @@
             "type": "TripleConstraint",
             "predicate": "http://hl7.org/fhir/suppliedBy",
             "valueExpr": "https://inria.fr/TSupplier",
-			"min":1,
-			"max":1
+			"min":0,
+			"max":-1
           }
         ]
       }
