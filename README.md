@@ -9,7 +9,7 @@ ShERML, a tool for facilitating the data exchange from relational data to RDF. T
 5. Open a terminal  and go to the same directory of the jar file (```$cd path```)
 6. Run the command 
 ``` console
-$java -jar rel2shape.jar
+martin@lozano:~$ java -jar rel2shape.jar
 ```
 7. Open a browser and type
 ```localhost:8080/```
